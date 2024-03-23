@@ -1,0 +1,41 @@
+:root {
+  --main-backround: #f6f8fc;
+  --hover-effect: #e7e5ef;
+  --search-input: #eaf1fb;
+  --search-input-click: #ffffff;
+  --nav-backround: #f6f8fc;
+  --create-color: #c2e7ff;
+  --left-clik: #d3e3fd;
+  --mails-backround: #ffffff;
+  --box-color: #f2f6fc;
+  --icon-size: 24px;
+  --active-color: #d5e4ff;
+  --light_gray: #f8f9fa;
+  --middle_gray: #e9ecef;
+  --dark_gray: #495057;
+  --light_blue: #d0ebff;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  padding: 3px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--hover-effect);
+    transition: all 0.3s;
+  }
+}
+section {
+  display: flex;
+  gap: 20px;
+}

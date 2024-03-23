@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="left">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <i class="bi bi-list"></i>
+          <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/logo-24.png?raw=true" width="24" alt="" />
+          <span>Gmail</span>
+        </div>
+      </div>
+      <div class="middle">
+        <form id="searchInputArea">
+          <div class="search">
+            <i class="bi bi-search"></i>
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search in mails"
+            />
+          </div>
+          <div class="setting">
+            <i class="bi bi-sliders2"></i>
+          </div>
+        </form>
+      </div>
+      <div id="toggle">
+        <i class="indicator"></i>
+      </div>
+      <div class="right">
+        <i class="bi bi-question-circle"></i>
+        <i class="bi bi-gear"></i>
+        <i class="bi bi-grid-3x3-gap-fill"></i>
+        <i class="bi bi-menu-button-wide-fill"></i>
+        <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/man.jpg?raw=true" alt="" />
+      </div>
+    </header>
+    <section id="sectionArea">
+      <nav id="leftNav">
+        <div class="create">
+          <i class="bi bi-pencil-fill"></i>
+          <span>Create</span>
+        </div>
+        <div class="nav-middle">
+          <a href="" class="active">
+            <i class="bi bi-inbox-fill"></i>
+            <span>Inbox</span>
+          </a>
+          <a href="">
+            <i class="bi bi-image"></i>
+            <span>All Comers</span>
+          </a>
+          <a href="">
+            <i class="bi bi-star"></i>
+            <span>Stared/Important</span>
+          </a>
+          <a href="">
+            <i class="bi bi-clock"></i>
+            <span>Timed/Postponed</span>
+          </a>
+          <a href="">
+            <i class="bi bi-send-fill"></i>
+            <span>Sending</span>
+          </a>
+          <a href="">
+            <i class="bi bi-arrow-right-circle"></i>
+            <span>Sent</span>
+          </a>
+          <a href="">
+            <i class="bi bi-file-earmark"></i>
+            <span>Drafts</span>
+          </a>
+          <a href="">
+            <i class="bi bi-caret-down-fill"></i>
+            <span>Other</span>
+          </a>
+          <a href="">
+            <i class="bi bi-arrow-down-short"></i>
+            <span>For more</span>
+          </a>
+        </div>
+        <div class="nav-bottom">
+          <div>
+            <span>Labels Categories</span>
+            <i class="bi bi-plus-lg"></i>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="top">
+          <div class="left">
+            <div class="checkbox">
+              <input type="checkbox" />
+              <span>
+                <i class="bi bi-caret-down"></i>
+              </span>
+            </div>
+            <i class="bi bi-arrow-clockwise"></i>
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>
+          <div class="right">
+            <p>1-27 of 49 lines</p>
+            <i class="bi bi-caret-left passive"></i>
+            <i class="bi bi-arrow-left-short"></i>
+            <i class="bi bi-arrow-right-short"></i>
+            <i class="bi bi-caret-right-fill"></i>
+            <div class="keyboard">
+              <i class="bi bi-keyboard"></i>
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="mails-area">
+           
+        </div>
+      </main>
+      <aside id="asideNav">
+        <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/calendar-48.png?raw=true" class="icon" alt="" />
+        <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/keep-48.png?raw=true" class="icon" alt="" />
+        <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/task-48.png?raw=true" class="icon" alt="" />
+        <img src="https://github.com/Udemig/9-Cuma-Projeleri/blob/main/cuma-gmail-clone/images/account-48.png?raw=true" class="icon" alt="" />
+        <span></span>
+        <i class="bi bi-plus-lg icon"></i>
+      </aside>
+    </section>
+    <div class="modal-wrapper">
+      <div class="modal-inner">
+        <i class="bi bi-x-lg" id="close-btn"></i>
+        <form id="create-mail-form">
+          <label for="">To who</label>
+          <input type="text" />
+          <label for="">Subject</label>
+          <input type="text" />
+          <label for="">Contents</label>
+          <textarea></textarea>
+          <button id="send-mail-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

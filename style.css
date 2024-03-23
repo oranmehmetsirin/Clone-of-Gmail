@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --main-backround: #f6f8fc;
+  --hover-effect: #e7e5ef;
+  --search-input: #eaf1fb;
+  --search-input-click: #ffffff;
+  --nav-backround: #f6f8fc;
+  --create-color: #c2e7ff;
+  --left-clik: #d3e3fd;
+  --mails-backround: #ffffff;
+  --box-color: #f2f6fc;
+  --icon-size: 24px;
+  --active-color: #d5e4ff;
+  --light_gray: #f8f9fa;
+  --middle_gray: #e9ecef;
+  --dark_gray: #495057;
+  --light_blue: #d0ebff;
+}
+
+.flex, main .mail .right, main .mail .left, main .top .left .checkbox input, main .top .left .checkbox, header .right, header .middle form .search, header .middle form, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon, main .top .right i, main .top .left i, header .right img, header .right i, header .middle form .setting, header .middle form .search i {
+  padding: 3px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.icon:hover, main .top .right i:hover, main .top .left i:hover, header .right img:hover, header .right i:hover, header .middle form .setting:hover, header .middle form .search i:hover {
+  background-color: var(--hover-effect);
+  transition: all 0.3s;
+}
+
+section {
+  display: flex;
+  gap: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  background-color: var(--nav-backround);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 21px;
+  gap: 20px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .left .hamburger-menu {
+  padding: 5px;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+header .left .hamburger-menu:hover {
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+header .left img,
+header .left span {
+  cursor: pointer;
+}
+header .middle {
+  width: 100%;
+}
+header .middle form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--search-input);
+  border-radius: 20px;
+  padding: 6px 9.5px;
+  gap: 10px;
+  max-width: 580px;
+}
+header .middle form .search {
+  gap: 10px;
+}
+header .middle form input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  width: 450px;
+}
+header .right {
+  justify-content: space-between;
+  gap: 11.5px;
+}
+header .right img {
+  border-radius: 50%;
+  width: 37px;
+  height: 36.5px;
+}
+
+section {
+  display: flex;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12.5px;
+  gap: 32.5px;
+}
+nav .create {
+  background-color: var(--create-color);
+  padding: 15px;
+  border-radius: 17.5px;
+  display: flex;
+  gap: 15.5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+nav .create:hover {
+  box-shadow: 2px 2px 10px gray;
+  transition: all 0.4s;
+}
+nav .nav-middle {
+  display: grid;
+  font-size: 16px;
+}
+nav .nav-middle .active {
+  background-color: var(--active-color);
+  border-radius: 0px 20px 20px 0px;
+  font-weight: bolder;
+}
+nav .nav-middle a {
+  padding: 7px 12px 7px 26px;
+  margin-left: 4px;
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+nav .nav-middle a:hover {
+  background-color: var(--hover-effect);
+  border-radius: 0px 20px 20px 0px;
+}
+nav .nav-middle a i span {
+  pointer-events: none;
+}
+nav .nav-bottom div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide .create span,
+.hide .nav-middle a span,
+.hide .nav-bottom span {
+  display: none;
+}
+
+main {
+  background-color: #f8fcfe;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+main .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  padding: 8px;
+}
+main .top .left {
+  display: flex;
+  gap: 9px;
+}
+main .top .left i {
+  width: 25px;
+  height: 25px;
+}
+main .top .left .checkbox {
+  padding-left: 10px;
+  gap: 3px;
+}
+main .top .left .checkbox input {
+  border-radius: 0;
+  width: 15px;
+  height: 20px;
+}
+main .top .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+main .top .right .passive {
+  color: rgb(174, 174, 174);
+  cursor: default;
+}
+main .top .right i {
+  width: 25px;
+  height: 25px;
+  font-size: 19px;
+}
+main .top .right .keyboard {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+main .top .right .keyboard i {
+  margin-top: 2px;
+  padding: 4px;
+  width: 15px;
+  height: 20px;
+  border-radius: 0;
+}
+main .mails-area {
+  height: 80vh;
+  background: var(--middle_gray);
+}
+main .mail {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 10px;
+  font-size: 16px;
+  background-color: #f6f6f7;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding: 10px;
+  transition: box-shadow 0.3s;
+}
+main .mail:hover {
+  box-shadow: 0px 0px 10px rgb(211, 211, 211);
+}
+main .mail .left {
+  justify-content: start;
+  gap: 5px;
+}
+main .mail .left span {
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .mail .left span:hover {
+  transition: all 0.3s;
+}
+main .mail .right {
+  justify-content: space-between;
+  font-size: 17px;
+}
+main .mail .right .message-title {
+  font-weight: bold;
+  white-space: nowrap;
+}
+main .mail .right .message-date {
+  white-space: nowrap;
+  width: 100px;
+  font-size: 15px;
+}
+main .mail .right .message-description {
+  margin-left: 14px;
+  width: 100%;
+}
+main .mail .right .delete {
+  background: none;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: none;
+  width: 100px;
+}
+main .mail:hover > .right .message-date {
+  display: none;
+}
+main .mail:hover > .right .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12.5px;
+}
+aside img {
+  width: 28px;
+  height: 28px;
+}
+aside .icon, aside header .middle form .search i, header .middle form .search aside i, aside header .middle form .setting, header .middle form aside .setting, aside header .right i, header .right aside i, aside header .right img, header .right aside img, aside main .top .left i, main .top .left aside i, aside main .top .right i, main .top .right aside i {
+  width: 30px;
+  height: 30px;
+}
+aside span {
+  background: #a4aab0;
+  width: 100%;
+  height: 2px;
+}
+
+.modal-wrapper {
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.201);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  place-items: center;
+}
+.modal-wrapper .modal-inner {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+}
+.modal-wrapper .modal-inner #close-btn {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.modal-wrapper .modal-inner form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-wrapper .modal-inner form label {
+  margin-top: 40px;
+}
+.modal-wrapper .modal-inner form input,
+.modal-wrapper .modal-inner form textarea {
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 8px;
+  outline: none;
+}
+.modal-wrapper .modal-inner form textarea {
+  width: 100%;
+  min-height: 100px;
+  max-height: 150px;
+  resize: vertical;
+}
+.modal-wrapper .modal-inner form #send-mail-btn {
+  background: var(--create-color);
+  border: none;
+  padding: 15px 30px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  transition: box-shadow 0.3s;
+}
+.modal-wrapper .modal-inner form #send-mail-btn:hover {
+  box-shadow: 0 0 10px gray;
+}
+
+.bi-star-fill {
+  color: rgb(232, 232, 0);
+}
+
+#toggle {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 75px;
+  height: 25px;
+  border-radius: 160px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+#toggle .indicator {
+  display: flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.5);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  transition: all 0.5s;
+}
+
+#toggle.active {
+  background: #7ea8b3;
+}
+
+#toggle.active .indicator {
+  left: 20px;
+}
+
+.darkMode {
+  background-color: #8dbbc9;
+}/*# sourceMappingURL=style.css.map */

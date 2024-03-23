@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "modules";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "roboto";
+  background-color: var(--nav-backround);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  @extend .flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 21px;
+  gap: 20px;
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .hamburger-menu {
+      padding: 5px;
+      font-size: 24px;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      box-sizing: content-box;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+    }
+    img,
+    span {
+      cursor: pointer;
+    }
+  }
+  .middle {
+    width: 100%;
+    form {
+      @extend .flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--search-input);
+      border-radius: 20px;
+      padding: 6px 9.5px;
+      gap: 10px;
+      max-width: 580px;
+      .search {
+        @extend .flex;
+        gap: 10px;
+        i {
+          @extend .icon;
+        }
+      }
+      .setting {
+        @extend .icon;
+      }
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 18px;
+        width: 450px;
+      }
+    }
+  }
+  .right {
+    @extend .flex;
+    justify-content: space-between;
+    gap: 11.5px;
+    i {
+      @extend .icon;
+    }
+    img {
+      border-radius: 50%;
+      width: 37px;
+      height: 36.5px;
+      @extend .icon;
+    }
+  }
+}
+section {
+  display: flex;
+  gap: 20px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12.5px;
+  gap: 32.5px;
+  .create {
+    background-color: var(--create-color);
+    padding: 15px;
+    border-radius: 17.5px;
+    display: flex;
+    gap: 15.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 2px 2px 10px gray;
+      transition: all 0.4s;
+    }
+  }
+  .nav-middle {
+    display: grid;
+    font-size: 16px;
+    .active {
+      background-color: var(--active-color);
+      border-radius: 0px 20px 20px 0px;
+      font-weight: bolder;
+    }
+    a {
+      padding: 7px 12px 7px 26px;
+      margin-left: 4px;
+      display: flex;
+      gap: 12px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--hover-effect);
+        border-radius: 0px 20px 20px 0px;
+      }
+      i span {
+        pointer-events: none;
+      }
+    }
+  }
+  .nav-bottom {
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.hide {
+  .create span,
+  .nav-middle a span,
+  .nav-bottom span {
+    display: none;
+  }
+}
+main {
+  background-color: #f8fcfe;
+  border-radius: 8px;
+  flex-grow: 1;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    padding: 8px;
+    .left {
+      display: flex;
+      gap: 9px;
+      i {
+        @extend .icon;
+        width: 25px;
+        height: 25px;
+      }
+      .checkbox {
+        @extend .flex;
+        padding-left: 10px;
+        gap: 3px;
+        input {
+          @extend .flex;
+          border-radius: 0;
+          width: 15px;
+          height: 20px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      .passive {
+        color: rgb(174, 174, 174);
+        cursor: default;
+      }
+      i {
+        @extend .icon;
+        width: 25px;
+        height: 25px;
+        font-size: 19px;
+      }
+      .keyboard {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 10px;
+        i {
+          margin-top: 2px;
+          padding: 4px;
+          width: 15px;
+          height: 20px;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .mails-area {
+    height: 80vh;
+    background: var(--middle_gray);
+  }
+  .mail {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+    font-size: 16px;
+    background-color: #f6f6f7;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding: 10px;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 10px rgb(211, 211, 211);
+    }
+    .left {
+      @extend .flex;
+      justify-content: start;
+      gap: 5px;
+      span {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        box-sizing: content-box;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          transition: all 0.3s;
+        }
+      }
+    }
+    .right {
+      @extend .flex;
+      justify-content: space-between;
+      font-size: 17px;
+      .message-title {
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      .message-date {
+        white-space: nowrap;
+        width: 100px;
+        font-size: 15px;
+      }
+      .message-description {
+        margin-left: 14px;
+        width: 100%;
+      }
+      .delete {
+        background: none;
+        border: none;
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: none;
+        width: 100px;
+      }
+    }
+    &:hover > .right .message-date {
+      display: none;
+    }
+    &:hover > .right .delete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12.5px;
+  img {
+    width: 28px;
+    height: 28px;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  span {
+    background: #a4aab0;
+    width: 100%;
+    height: 2px;
+  }
+}
+.modal-wrapper {
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.201);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+  place-items: center;
+  .modal-inner {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+    #close-btn {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      label {
+        margin-top: 40px;
+      }
+      input,
+      textarea {
+        border: 1px solid gray;
+        border-radius: 4px;
+        margin-top: 10px;
+        padding: 8px;
+        outline: none;
+      }
+      textarea {
+        width: 100%;
+        min-height: 100px;
+        max-height: 150px;
+        resize: vertical;
+      }
+      #send-mail-btn {
+        background: var(--create-color);
+        border: none;
+        padding: 15px 30px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        transition: box-shadow 0.3s;
+        &:hover {
+          box-shadow: 0 0 10px gray;
+        }
+      }
+    }
+  }
+}
+.bi-star-fill {
+  color: rgb(232, 232, 0);
+}
+
+#toggle {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 75px;
+  height: 25px;
+  border-radius: 160px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+  .indicator {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+      inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s;
+  }
+}
+#toggle.active {
+  background: #7ea8b3;
+}
+#toggle.active .indicator {
+  left: 20px;
+}
+.darkMode {
+  background-color: #8dbbc9;
+}
